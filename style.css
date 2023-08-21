@@ -1,0 +1,94 @@
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: blueviolet;
+    font-weight: bold;
+    margin: 4rem;
+    color: #fff;
+    font-family: cursive;
+    overflow: hidden;
+}
+h2{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    font-size: 4vw;
+}
+#currentYear{
+    font-size: 8vw;
+    text-align: center;
+}
+#countdown{
+    background: rgba(0, 0, 0, 0.1);
+    height: 10vw; width: 100%;
+    margin: 30px;
+    width: 100%;
+    display: flex;
+    gap: 65px;
+    justify-content: center;
+    align-items: center;
+}
+#countdown div{
+  margin: 0 15px;
+  font-size: 4vw;
+  font-weight: 500;
+  margin-top: -25px;
+  position: relative;
+  text-align: center;
+  width: 100px;
+} 
+#countdown div::before {
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    font-size: 0.35em;
+    line-height: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    width: 100%;
+    height: 35px;
+  }
+#countdown #months::before {
+    content: "Months";
+    color: bisque;
+  }
+  
+#countdown #days::before {
+    content: "Days";
+    color: chocolate;
+  }
+#countdown #hours::before {
+    content: "Hours";
+    color: #00ffff;
+  }
+#countdown #min::before {
+    content: "Minutes";
+    color: aqua;
+  }
+
+  @media only screen and (min-width: 300px) and (max-width: 900px) {
+    body{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    #currentYear{
+     margin-left: 30% ;
+     line-height: 5rem;
+    }
+    #countdown{
+      display: flex;
+      flex-wrap: wrap;
+      background: none;
+    }
+    #countdown div{
+       width: 100%;
+       font-size: 10vw;
+       font-weight: 500;
+    }
+  }
